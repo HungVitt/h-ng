@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Đồng Hồ Cao Cấp - Mua Sắm Sành Điệu</title>
+
+    <style>
+      /* Reset và cài đặt mặc định cho các phần tử */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f1f1f1;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header .logo {
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      header nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      header nav ul li {
+        display: inline-block;
+      }
+
+      header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      header nav ul li a:hover {
+        background-color: #d9534f;
+        color: #fff;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("https://via.placeholder.com/1500x600/111/fff?text=Luxury+Watches")
+          center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      .hero p {
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+
+      .hero .btn {
+        background-color: #d9534f;
+        color: #fff;
+        border: none;
+        padding: 15px 40px;
+        font-size: 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .hero .btn:hover {
+        background-color: #c9302c;
+      }
+
+      /* Product Section */
+      .product-section {
+        background-color: #fff;
+        padding: 80px 20px;
+      }
+
+      .product-section h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 50px;
+        color: #333;
+        text-transform: uppercase;
+      }
+
+      .product-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .product-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .product-card .details {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .product-card h3 {
+        font-size: 22px;
+        margin: 10px 0;
+      }
+
+      .product-card .price {
+        font-size: 18px;
+        color: #d9534f;
+        margin-bottom: 15px;
+      }
+
+      .product-card .btn {
+        background-color: #28a745;
+        color: #fff;
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .product-card .btn:hover {
+        background-color: #218838;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      footer h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      footer p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      footer a {
+        color: #d9534f;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        .product-list {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .hero p {
+          font-size: 18px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        header nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .product-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">Đồng Hồ Cao Cấp</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="product.html">Sản phẩm</a></li>
+            <li><a href="cart.html">Giỏ hàng</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Khám Phá Đồng Hồ Cao Cấp</h1>
+      <p>
+        Thời gian là quý giá, hãy để chúng tôi giúp bạn sở hữu chiếc đồng hồ
+        đẳng cấp.
+      </p>
+      <button class="btn">Xem Sản Phẩm</button>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section">
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="product-list">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300" alt="Đồng Hồ Omega" />
+          <div class="details">
+            <h3>Đồng Hồ Omega</h3>
+            <p class="price">10,000,000 VND</p>
+            <button class="btn">Mua ngay</button>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300" alt="Đồng Hồ Rolex" />
+          <div class="details">
+            <h3>Đồng Hồ Rolex</h3>
+            <p class="price">25,000,000 VND</p>
+            <button class="btn">Mua ngay</button>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300" alt="Đồng Hồ Seiko" />
+          <div class="details">
+            <h3>Đồng Hồ Seiko</h3>
+            <p class="price">5,000,000 VND</p>
+            <button class="btn">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <h3>Liên hệ với chúng tôi</h3>
+      <p>Hỗ trợ khách hàng: 1800-123-456</p>
+      <p>Email: support@donghocao.com</p>
+      <p>&copy; 2024 Đồng Hồ Cao Cấp. <a href="#">Chính sách bảo mật</a></p>
+    </footer>
+  </body>
+</html>
